@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile</title>
+  <link rel="stylesheet" href="/hrmlcss/profile.css">
+</head>
+
+<body>
+
+  <!-- New top header section -->
+  <div class="top-header">
+    <p>PHINMA UI WEBCITE</p>
+    <div class="top-header-links">
+      <a href="" class="top-header-link">Dashboard</a>
+      <a href="{{ url_for('account_list')}}" class="top-header-link">Account List</a>
+      <a href="" class="top-header-link">Members</a>
+      <a href="" class="top-header-link">Campus</a>
+      <a href="" class="top-header-link">List</a>
+    </div>
+  </div>
+
+  
+  <div class="header">
+    <img src="/static/images/university_logo.7.png" alt="logo" class="logo">
+    <div class="header-text">
+      <h1>PHINMA</h1> 
+      <h2>UNIVERSITY OF ILOILO</h2>
+    </div>
+    <div class="header-links">
+      <div class="dropdown">
+        <a href="#" class="header-link">COURSES</a>
+          <img src="/static/images/arrow.png" alt="arrow" class="arrow">
+        <div class="dropdown-content">
+          <a href="/course1">BSIT</a>
+          <a href="/course2">HTM</a>
+          <a href="/course3">CRIM</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="{{ url_for('event') }}" class="header-link">EVENTS</a>
+          <img src="/static/images/arrow.png" alt="arrow" class="arrow">
+        <div class="dropdown-content">
+          <a href="/member1">On Going Events</a>
+          <a href="/member2">Up coming</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="header-link">SETTINGS</a>
+         <img src="/static/images/arrow.png" alt="arrow" class="arrow">
+        <div class="dropdown-content">
+          <a href="/profile">Profile</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/security">Security</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="header-link">ACCOUNT</a>
+        <img src="/static/images/arrow.png" alt="arrow" class="arrow">
+        <div class="dropdown-content">
+          <a href="{{ url_for('login')}}">LOGIN</a>
+         <a href="{{ url_for('signup')}}" class="signup-link">SIGNUP</a> 
+          
+        </div>
+      </div>
+     
+    </div>
+  </div>
+
+  <div class="cover-container">
+  <img src="/static/images/UI.jpg" alt="coverphoto" class="coverphoto">
+  
+  <div class="pofile-container">
+    <h2> Neil Mar C. De Asis</h2>
+    <h5> ADMIN </h5>
+  <img src="/static/images/PFP.png" alt="pfp" class="pfp">
+
+  </div>
+ 
+
+     </div>
+     <div class="cover-container2">
+<h1> ABOUT ME </h1>
+
+      <div class="cover-container3">
+<h1> DETAILS </h1>
+      </div>
+
+     </div>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSIT 2nd List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/BSIT2.css') }}">
+</head>
+<body>
+    <!--START side nav bar-->
+    <div class="header">
+        <div class="side-nav">
+            <div class="user">
+                <img src="../static/images/user.png" alt="" class="user-img">
+                <div>
+                    <h2></h2>
+                    <p></p>
+                </div>
+                <img src="../static/images/star.png" alt="" class="star-img">
+            </div>
+            <ul>
+                <li>
+                    <a href="/home">
+                        <img src="{{ url_for('static', filename='images/dashboard.png') }}" alt="">
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('list')}}">
+                        <img src="{{ url_for('static', filename='images/reports.png') }}" alt="">
+                        <p>List</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('adding')}}">
+                        <img src="{{ url_for('static', filename='images/members.png') }}" alt="">
+                        <p>Add</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('campus')}}">
+                        <img src="{{ url_for('static', filename='images/messages.png') }}" alt="">
+                        <p>Campus Map</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('campus')}}">
+                        <img src="{{ url_for('static', filename='images/projects.png') }}" alt="">
+                        <p>Events</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/members">
+                        <img src="{{ url_for('static', filename='images/members.png') }}" alt="">
+                        <p>Members</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/settings">
+                        <img src="{{ url_for('static', filename='images/setting.png') }}" alt="">
+                        <p>Settings</p>
+                    </a>
+                </li>
+            </ul>            
+            <ul>    
+                <li><img src="../static/images/logout.png" alt=""><p></p></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h3>List of Students</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>School ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>School Email</th>
+                        <th>Course</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for  student in students %}
+                    <tr>
+                        <form action="/update" method="POST">
+                            <td>{{student[0]}}</td>
+                            <td>{{student[1]}}</td>
+                            <input type="hidden" name="upd_ID" value="{{student[1]}}">
+                            <td>{{student[2]}}</td>
+                            <input type="hidden" name="upd_name" value="{{student[2]}}">
+                            <td>{{student[3]}}</td>
+                            <input type="hidden" name="upd_age" value="{{student[3]}}">
+                            <td>{{student[4]}}</td>
+                            <input type="hidden" name="upd_email" value="{{student[4]}}">
+                            <td>{{student[5]}}</td>
+                            <input type="hidden" name="upd_course" value="{{student[5]}}">
+                            <td>
+                                <input type="hidden" name="num_id" value="{{student[0]}}">
+                                <button type="submit" name="action" value="updater">Update</button>
+                                <button type="submit" name="action" value="deleter">Delete</button>
+                        </td>
+                    </form>
+                    </tr>
+
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+</body>
+</html>

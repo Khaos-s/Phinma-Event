@@ -1,0 +1,61 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHINMA UI WEBCITE</title>
+    <link rel="stylesheet" href="/static/css/style(home).css">
+    </head>
+    <body>
+            <!-- New top header section -->
+            
+    </div>
+    <img src="/static/images/UI.jpg" alt="UI" class="UI">
+    <div class="header">
+    <img src="/static/images/university_logo.7.png" alt="logo" class="logo">
+    <div class="header-text">
+    <h1>PHINMA</h1>
+    <h2>UNIVERSITY OF ILOILO</h2>
+    </div>
+    <div class="header-links">
+    <div class="dropdown">
+    <a href="#" class="header-link">COURSES</a>
+    <img src="/static/images/arrow.png" alt="arrow" class="arrow">
+    <div class="dropdown-content">
+    <a href="/course1">BSIT</a>
+
+    <a href="/course2">HTM</a>
+    <a href="/course3">CRIM</a>
+    </div>  
+    </div>
+    <div class="dropdown">
+    <a href="#" class="header-link">EVENTS</a>
+    <img src="/static/images/arrow.png" alt="arrow" class="arrow">
+    <div class="dropdown-content">
+    <a href="/member1">Member</a>
+    <a href="/member2">Member</a>
+    <a href="/member3">Member</a>
+    </div>
+    </div>
+    <div class="dropdown">
+    <a href="#" class="header-link">SETTINGS</a>
+    <img src="/static/images/arrow.png" alt="arrow" class="arrow">
+    <div class="dropdown-content">
+    <a href="/profile">Profile</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/security">Security</a>
+    </div>
+    </div>
+    <div class="dropdown">
+    <a href="#" class="header-link">ACCOUNT</a>
+    <img src="/static/images/arrow.png" alt="arrow" class="arrow">
+    <div class="dropdown-content">
+    <a href="{{ url_for('login')}}">LOGIN</a>
+    <a href="{{ url_for('signup')}}">SIGNUP</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>

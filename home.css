@@ -1,0 +1,204 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+.body {
+    
+    background-size: cover;
+    background-position: center;
+}
+
+/* Top Header */
+.top-header {
+    width: 70%;
+    height: 60px;
+    background-color: #0B8F2A; /* Change this color as needed */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+    margin-left: 30%;
+    border-radius: 0 0 0 20px;
+}
+
+.top-header p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    
+}
+
+.top-header-links {
+    display: flex;
+    align-items: center;
+}
+
+.top-header-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: normal;
+    position: relative;
+    padding: 10px 15px; /* Increased padding for larger highlight */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background color and box-shadow */
+    border-radius: 10px; /* Rounded corners for the highlight */
+}
+
+.top-header-link:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Larger highlight effect on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+    text-decoration: none; /* Ensuring underline doesn't overlap highlight */
+}
+
+.top-header-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    width: 0;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.top-header-link:hover::after {
+    width: 100%;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    height: 110px;
+    background-color: white; /* Change this color as needed */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 3px 8px 8px gray;
+}
+
+.header img.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 5%;
+    margin-left: 2%;
+}
+
+.header-text {
+    text-align: center;
+    flex: 1;
+}
+
+.header h1,
+.header h2 {
+    position: relative;
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+    margin: 0;
+    margin-right: 80%;
+    margin-top: -70px;
+    right: -2%;
+    letter-spacing: 3px;
+}
+
+.header h1 {
+    font-size: 30px;
+     color: #0B8F2A;
+}
+
+.header h2 {
+    font-size: 15px;
+    margin-top: -2px;
+    left: 20px;
+}
+
+/* Header Links */
+.header-links {
+    display: flex;
+    align-items: center;
+}
+
+.header-link {
+    bottom: 20px;
+    color: black;
+    text-decoration: none;
+    margin-left: 15px; /* Ensuring spacing between links */
+    font-size: 15px;
+    padding: 10px 20px; /* Adjusted padding for better spacing */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background color and box-shadow */
+    border-radius: 5px; /* Rounded corners for the highlight */
+    position: relative; /* Required for dropdown positioning */
+    left: -30%;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px 20px; /* Adjusted padding for consistency */
+    top: 100%; /* Positions the dropdown below the header link */
+    left: -18%; /* Aligns the dropdown with the left edge of the parent */
+}
+
+/* Dropdown Items */
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change background color of the link when the dropdown is visible */
+.dropdown:hover .header-link {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.UI {
+    position: absolute;
+    width: 100%;
+    height: auto; /* Adjusted height to fit content */
+    margin-top: 5.6%;
+    margin-left: 0; /* Fixed incorrect percentage */
+}
+
+.arrow {
+    width: 30px;
+    height: auto;
+    position: relative;
+    align-items: center;
+    right: 65px;
+    top: 0px;
+    padding: 10px 0px;
+
+}

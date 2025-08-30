@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - PHINMA UI Student Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/static/images/logo.png">
+    <link rel="stylesheet" href="/static/login.css">
+    <link rel="stylesheet" href="/static/logreg.css">
+</head>
+<body>
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+<div class="container">
+    <div class="card">
+        <div class="row g-0">
+            <div class="col-md-6 left-side">
+                <div class="text-center">
+                    <img src="/static/images/UILOGO.jpg" alt="University Logo">
+                    <h2>Forgot Password</h2>
+                    <p>Enter your email address below to receive your password.</p>
+                </div>
+            </div>
+            <div class="col-md-6 right-side">
+                <form action="/forgot_password" method="post">
+                    <h4 class="fw-bold mb-4 text-center">Reset Your Password</h4>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Reset Password</button>
+
+                    <p class="text-center mt-3">
+                        Remember your password? <a href="/login">Login here</a>
+                    </p>
+
+                    <p class="text-center mt-3">
+                        Don't have an account? <a href="/register">Create one here</a>
+                        Go to <a href="/admin_login">Admin Login</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNaviTXDTrdJ6pRVdcRrscT4IYPwfy0lIW2xVwwX2UDm3hxThU6lylwT5wjh3yc" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhG81Y6iUbw3LnpuXay9MGbA5kj3yZF8qND5BnuTVzK6ez5BOvEl6P1kK7Uw" crossorigin="anonymous"></script>
+</body>
+</html>

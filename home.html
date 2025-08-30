@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+  <!-- New top header section -->
+  <div class="top-header">
+    <p>PHINMA UI ADMINISTRATION</p>
+    <div class="top-header-links">
+      <a href="/" class="top-header-link">Dashboard</a>
+      <a href="{{ url_for('list') }}" class="top-header-link">List</a>
+      <a href="{{ url_for('members') }}" class="top-header-link">Members</a>
+      <a href="{{ url_for('campus') }}" class="top-header-link">Campus</a>
+      <a href="{{ url_for('event') }}" class="top-header-link">List</a>
+    </div>
+  </div>
+
+  <img src="../images/UI.JPG" alt="UI" class="UI">
+
+  <div class="header">
+    <img src="images/logo.png" alt="logo" class="logo">
+    <div class="header-text">
+      <h1>PHINMA</h1>
+      <h2>UNIVERSITY OF ILOILO</h2>
+    </div>
+    <div class="header-links">
+      <div class="dropdown">
+        <a href="#" class="header-link">COURSES</a>
+        <img src="images/arrow.png" alt="arrow" class="arrow">
+        <div class="dropdown-content">
+          <a href="/course1">BSIT</a>
+          <a href="/course2">HTM</a>
+          <a href="/course3">CRIM</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="Events.html" class="header-link">EVENTS</a>
+        <img src="images/arrow.png" alt="arrow" class="arrow">
+        <div class="dropdown-content">
+          <a href="/member1">Member</a>
+          <a href="/member2">Member</a>
+          <a href="/member3">Member</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="header-link">SETTINGS</a>
+        <img src="images/arrow.png" alt="arrow" class="arrow">
+        <div class="dropdown-content">
+          <a href="/profile">Profile</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/security">Security</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="header-link">ACCOUNT</a>
+        <img src="images/arrow.png" alt="arrow" class="arrow">
+        <div class="dropdown-content">
+          <a href="/signup1">LOGIN</a>
+          <a href="signup.html" class="signup-link">SIGNUP</a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

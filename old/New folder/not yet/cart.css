@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+#login-button {
+    background-color: #009970;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.navbar {
+    background-color: transparent;
+    height: 55px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 16px;
+    padding: 0.5rem;
+    box-shadow: 0 10px 30px rgba(41, 28, 28, 0.1);
+}
+
+
+
+.navbar-brand {
+    font-weight: 500;
+    color: #009970;
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+#login-button:hover {
+    background-color: #00b383;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #666777;
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #00b383;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0px;
+        height: 2px;
+        background-color: #009970;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+
+/* section banner */
+
+.section-banner1 {
+    margin: 50px 0;
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 50px;
+    width: 100%;
+    height: 40vh;
+    /* Subtract the header height */
+    font-size: 20px;
+    color: #1f1212;
+    background-image: url(img/HD\ wallpaper_\ black\,\ Blackest\,\ Dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    #banner {
+        padding: 40px;
+        font-size: 24px;
+    }
+}
+
+#banner h3 {
+    padding: 10px 0;
+    color: #fff;
+    font-size: 50px;
+
+}

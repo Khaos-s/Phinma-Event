@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Students</title>
+</head>
+<body>
+    <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('display') }}">Display Students</a></li>
+        <li><a href="{{ url_for('enrollment') }}">Enrollment</a></li>
+    </ul>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Section</th>
+            <th>Operation</th>
+        </tr>
+        {% for i in student %}
+        <tr>
+            <form action="/update" method="POST">
+                <td>
+                    <label>{{ i[1] }}</label>
+                    <input type="hidden" name="name" value="{{ i[1] }}">
+                </td>
+                <td>
+                    <label>{{ i[2] }}</label>
+                    <input type="hidden" name="section" value="{{ i[2] }}">
+                </td>
+                <td>
+                    <input type="hidden" name="id" value="{{ i[0] }}">
+                    <button type="submit">Update</button>
+                </td>
+            </form>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

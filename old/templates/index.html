@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - PHINMA UI Student Management System</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <h3>PHINMA UI Student Management System</h3>
+            <div class="navbar-links">
+                <a href="/">Home</a>
+                <a href="/aboutus">About Us</a>
+                <a href="/add">Add Student</a>
+                <a href="/grading">Grading</a>
+                <a href="/attendance">Attendance</a>
+            </div>
+        </div>
+        
+        <div class="content">
+        <h1>About Us</h1>
+            <p>The PHINMA UI Student Management System aims to make it easier and enhance the management of student information and administrative processes at PHINMA University of Iloilo. The system will automate various aspects of student data handling, such as enrollment, grading, attendance tracking, and communication, to improve operational efficiency and provide a better experience for both students and staff.</p>
+            <p>Our team consists of dedicated professionals committed to improving educational administration and supporting students and staff. We continuously work on enhancing the system to meet the evolving needs of our users.</p>
+        <div class="team-section">
+            <hr>
+            <h1>Project Team Roles & Responsibilities</h1>
+            <div class="team-member">
+                <h2>Josiah Danielle Gallenero</h2>
+                <p><strong>Role:</strong> Programmer</p>
+                <p><strong>Responsibilities:</strong> Coding, debugging errors, system testing, and integrating different modules into the management system.</p>
+            </div>
+            <hr>
+            <div class="team-member">
+                <h2>Keiru Dane Tuerto</h2>
+                <p><strong>Role:</strong> Researcher</p>
+                <p><strong>Responsibilities:</strong> Gathering requirements, analyzing existing processes, and documenting system specifications.</p>
+            </div>
+            <hr>
+            <div class="team-member">
+                <h2>Jhoana Angela Tecson Dolorfino</h2>
+                <p><strong>Role:</strong> Researcher</p>
+                <p><strong>Responsibilities:</strong> Gather and analyze existing research to understand the current state of knowledge on a specific topic.</p>
+            </div>
+            <hr>
+            <div class="team-member">
+                <h2>John Marion Alcazar</h2>
+                <p><strong>Role:</strong> Documenter</p>
+                <p><strong>Responsibilities:</strong> Develop comprehensive documentation for projects, including user manuals, technical guides, and process documentation.</p>
+            </div>
+            <hr>
+            <div class="team-member">
+                <h2>Krystal Laura Latorilla Sangacena</h2>
+                <p><strong>Role:</strong> Designer</p>
+                <p><strong>Responsibilities:</strong> Designing the user interface and ensuring a user-friendly experience.</p>
+            </div>
+        </div>
+    </div>
+
+    </body>
+    </html>
+
+
+
+add student.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student - PHINMA UI Student Management System</title>
+</head>
+<body>
+    <div class="navbar">
+        <h3>PHINMA UI Student Management System</h3>
+        <div class="navbar-links">
+            <a href="/">Home</a>
+            <a href="/aboutus">About Us</a>
+            <a href="/add">Add Student</a>
+            <a href="/grading">Grading</a>
+            <a href="/attendance">Attendance</a>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h3>Add Student</h3>
+        <form action="/add" method="POST">
+            <label for="student_id">Student ID:</label><br>
+            <input type="text" name="student_id" required><br>
+    
+            <label for="student_name">Name:</label><br>
+            <input type="text" name="student_name" required><br>
+    
+            <label for="section">Select Section:</label><br>
+            <select name="section" required>
+                <option value="" disabled selected>Select Section</option>
+                <option value="UI-FC1-BSIT 2-1">UI-FC1-BSIT 2-1</option>
+                <option value="UI-FC1-BSIT 2-2">UI-FC1-BSIT 2-2</option>
+                <option value="UI-FC1-BSIT 2-3">UI-FC1-BSIT 2-3</option>
+                <option value="UI-FC1-BSIT 2-4">UI-FC1-BSIT 2-4</option>
+                <option value="UI-FC2-BSIT 2-1">UI-FC2-BSIT 2-1</option>
+                <option value="UI-FC2-BSIT 2-2">UI-FC2-BSIT 2-2</option>
+                <option value="UI-FC2-BSIT 2-3">UI-FC2-BSIT 2-3</option>
+                <option value="UI-FC2-BSIT 2-4">UI-FC2-BSIT 2-4</option>
+            </select><br>
+    
+            <label for="course">Course:</label><br>
+            <select name="course" id="course" required>
+                <option value="" disabled selected>Select a course</option>
+                <option value="Bachelor of Science in Information Technology">Bachelor of Science in Information Technology</option>
+                <option value="Bachelor of Science in Hospitality Management">Bachelor of Science in Hospitality Management</option>
+                <option value="Bachelor of Science in Tourism Management">Bachelor of Science in Tourism Management</option>
+                <option value="Bachelor of Science in Accountancy">Bachelor of Science in Accountancy</option>
+                <option value="Bachelor of Science in Criminology">Bachelor of Science in Criminology</option>
+                <option value="Bachelor of Science in Nursing">Bachelor of Science in Nursing</option>
+                <option value="Bachelor of Science in Pharmacy">Bachelor of Science in Pharmacy</option>
+                <option value="Bachelor of Science in Accounting Information System">Bachelor of Science in Accounting Information System</option>
+                <option value="Bachelor of Secondary Education">Bachelor of Secondary Education</option>
+                <option value="Bachelor of Science in Civil Engineering">Bachelor of Science in Civil Engineering</option>
+            </select>
+    
+            <br>
+            <label for="age">Age:</label><br>
+            <input type="number" name="age" required><br><br>
+    
+            <input type="submit" value="Add_Student">
+        </form>
+        <h3>{{ msg }}</h3>
+    </div>
+</body>
+</html>
+
+
+
+attendance.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance - PHINMA UI Student Management System</title>
+</head>
+<body>
+    <div class="navbar">
+        <h3>PHINMA UI Student Management System</h3>
+        <div class="navbar-links">
+            <a href="/">Home</a>
+            <a href="/aboutus">About Us</a>
+            <a href="/add">Add Student</a>
+            <a href="/grading">Grading</a>
+            <a href="/attendance">Attendance</a>
+        </div>
+    </div>
+
+    <div class="content"
+        <h3>Attendance Records</h3>
+
+        <form action="/attendance" method="post">
+            <label for="student_id">Enter Student ID:</label>
+            <input type="text" name="student_id" required>
+            <label for="status">Status:</label>
+            <select name="status" required>
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+                <option value="Late">Late</option>
+                <option value="Excused">Excused</option>
+            </select>
+            <input type="submit" value="Submit Attendance">
+        </form>
+<br>
+        <!-- Attendance table -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Section</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in attendance %}
+                <tr>
+                    <td>{{ record[0] }}</td>
+                    <td>{{ record[1] }}</td>
+                    <td>{{ record[2] }}</td>
+                    <td>{{ record[3] }}</td>
+                    <td>{{ record[4] }}</td>
+                    <td>{{ record[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
+
+grading.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading - PHINMA UI Student Management System</title>
+</head>
+<body>
+    <div class="navbar">
+        <h3>PHINMA UI Student Management System</h3>
+        <div class="navbar-links">
+            <a href="/">Home</a>
+            <a href="/aboutus">About Us</a>
+            <a href="/add">Add Student</a>
+            <a href="/grading">Grading</a>
+            <a href="/attendance">Attendance</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h3>Grading System</h3>
+
+        <!-- grading form -->
+        <form action="/grading" method="post">
+            <label for="student_id">Enter Student ID:</label><br>
+            <input type="text" name="student_id" required><br>
+        
+            <label for="section">Select Section:</label><br>
+            <select name="section" required>
+                <option value="" disabled selected>Select Section</option>
+                <option value="UI-FC1-BSIT 2-1">UI-FC1-BSIT 2-1</option>
+                <option value="UI-FC1-BSIT 2-2">UI-FC1-BSIT 2-2</option>
+                <option value="UI-FC1-BSIT 2-3">UI-FC1-BSIT 2-3</option>
+                <option value="UI-FC1-BSIT 2-4">UI-FC1-BSIT 2-4</option>
+                <option value="UI-FC2-BSIT 2-1">UI-FC2-BSIT 2-1</option>
+                <option value="UI-FC2-BSIT 2-2">UI-FC2-BSIT 2-2</option>
+                <option value="UI-FC2-BSIT 2-3">UI-FC2-BSIT 2-3</option>
+                <option value="UI-FC2-BSIT 2-4">UI-FC2-BSIT 2-4</option>
+            </select><br>
+        
+            <label for="subject">Select Subject:</label><br>
+            <select name="subject" required>
+                <option value="" disabled selected>Select Subject</option>
+                <option value="OOP">OOP</option>
+                <option value="Networking">Networking</option>
+                <option value="Project Management">Project Management</option>
+                <option value="Information Management">Information Management</option>
+                <option value="Data Structure">Data Structure</option>
+            </select><br>            
+        
+            <label for="grade">Enter Grade:</label><br>
+            <input type="text" name="grade" required><br><br>
+        
+            <input type="submit" value="Submit Grade">
+        </form>        
+        <br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Section</th>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for grade in grading %}
+                <tr>
+                    <td>{{ grade[0] }}</td>
+                    <td>{{ grade[1] }}</td>
+                    <td>{{ grade[2] }}</td>
+                    <td>{{ grade[3] }}</td>
+                    <td>{{ grade[4] }}</td>
+                    <td>{{ grade[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - PHINMA UI Student Management System</title>
+</head>
+<body>
+    <div class="navbar">
+        <h3>PHINMA UI Student Management System</h3>
+        <div class="navbar-links">
+            <a href="/">Home</a>
+            <a href="/aboutus">About Us</a>
+            <a href="/add">Add Student</a>
+            <a href="/grading">Grading</a>
+            <a href="/attendance">Attendance</a>
+        </div>
+    </div>
+    <div class="content">
+        <h3>Student List</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Section</th>
+                    <th>Course</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                <tr>
+                    <td>{{ student[0] }}</td>
+                    <td>{{ student[1] }}</td>
+                    <td>{{ student[2] }}</td>
+                    <td>{{ student[3] }}</td>
+                    <td>{{ student[4] }}</td>
+                    <td>{{ student[5] }}</td>
+                    <td>
+                        <form action="/update" method="POST">
+                            <input type="hidden" name="student_id" value="{{ student[1] }}">
+                            <input type="hidden" name="student_name" value="{{ student[2] }}">
+                            <input type="hidden" name="age" value="{{ student[3] }}">
+                            <input type="hidden" name="section" value="{{ student[4] }}">
+                            <input type="hidden" name="course" value="{{ student[5] }}">
+                            <input type="submit" value="Update">
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
+
+update.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student Info</title>
+</head>
+<body>
+    <h1>Update Student Information: {{ student_name }}</h1>
+    <form action="/update_process" method="POST">
+        <input type="hidden" name="student_id" value="{{ student_id }}">
+        
+        <label for="student_name">Name:</label>
+        <input type="text" name="new_student_name" value="{{ student_name }}"><br>
+        
+        <label for="age">Age:</label>
+        <input type="text" name="new_age" value="{{ age }}"><br>
+        
+        <label for="section">Section:</label>
+        <input type="text" name="new_section" value="{{ section }}"><br>
+        
+        <label for="course">Course:</label>
+        <input type="text" name="new_course" value="{{ course }}"><br>
+        
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

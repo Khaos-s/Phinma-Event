@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style(signup).css') }}">
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <form action="{{ url_for('signup_process') }}" method="POST">
+        <div class="login-wrap">
+
+            <div class="login-html">
+            	<div class="vertical-line"></div>
+                <div class="button"><a href="{{ url_for('login')}}">LOGIN</a></div>
+                 <div class="button2"><a href="{{ url_for('home') }}"><i class="fa-solid fa-circle-arrow-left"></i> HOME</a></div>
+                <div class="container">
+                	<p>We’re thrilled to have you here. Sign up now to stay in the loop about our upcoming events, exclusive updates, and special offers.</p>
+                	<img src="/static/images/signup.png" name="logo" class="logo">
+                	<img src="/static/images/students.png" name="logo2" class="logo2">
+                   
+                  
+                    <h1 class="sign-up-heading">SIGN UP</h1> <!-- Added heading -->
+                    <div class="login-form">
+                        <div class="sign-up-htm">
+                            <!-- Sign-up form fields -->
+                            <div class="group">
+                                <label for="user" class="label"></label>
+                                <input id="user" type="text" class="input" name="student_ID" placeholder="Enter school number" required>
+                            </div>
+                            <div class="group">
+                                <label for="user" class="label"></label>
+                                <input id="name" type="text" class="input" placeholder="Enter name" name="name" required>
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label"></label>
+                                <input id="password" type="password" class="input" data-type="password" placeholder="Enter password" name="password" required>
+                            </div>
+                            <div class="group">
+                                <label for="confirm_password" class="label"></label>
+                                <input id="confirm_password" type="password" class="input" data-type="password" placeholder="Confirm password" name="confirm_password" required>
+                            </div>
+                            <div class="group">
+                                <label for="email" class="label"></label>
+                                <input id="email" type="text" class="input" name="email" placeholder="Enter email" required>
+                            </div>
+                            <div class="group">
+                                <input type="submit" class="button" value="Sign Up">
+                                 <input type="submit" class="button" value="Sign Up">
+                                
+                            </div>
+                            <div class="hr"></div>
+                            <div class="foot-lnk">
+                                <a>Already a Member?</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>
